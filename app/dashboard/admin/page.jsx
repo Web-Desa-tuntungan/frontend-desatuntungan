@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { useAuth } from "@/lib/auth"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { NewspaperIcon, ImageIcon, FileTextIcon } from "lucide-react"
+import { NewspaperIcon, ImageIcon, FileTextIcon, UsersIcon } from "lucide-react"
 
 export default function AdminDashboardOverviewPage() {
   const { user } = useAuth()
@@ -19,7 +19,7 @@ export default function AdminDashboardOverviewPage() {
       </CardHeader>
       <CardContent className="space-y-6 text-gray-700">
         <p>
-          Di sini Anda dapat mengelola berita dan kegiatan, mengelola galeri, serta memvalidasi permohonan layanan dari
+          Di sini Anda dapat mengelola berita dan kegiatan, mengelola galeri, mengelola perangkat desa, serta memvalidasi permohonan layanan dari
           warga.
         </p>
 
@@ -46,6 +46,19 @@ export default function AdminDashboardOverviewPage() {
               <p>Unggah dan kelola foto serta video galeri desa.</p>
               <Button asChild className="mt-4 bg-desa-secondary hover:bg-desa-secondary/90 text-white rounded-md">
                 <Link href="/dashboard/admin/galeri">Kelola Galeri</Link>
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card className="rounded-xl shadow-sm p-4 bg-desa-light-green/30">
+            <CardHeader className="flex-row items-center gap-4 p-0 pb-2">
+              <UsersIcon className="h-8 w-8 text-desa-primary" />
+              <CardTitle className="text-xl font-semibold text-desa-primary">Perangkat Desa</CardTitle>
+            </CardHeader>
+            <CardContent className="p-0 text-sm">
+              <p>Kelola data perangkat desa dan struktur organisasi.</p>
+              <Button asChild className="mt-4 bg-desa-secondary hover:bg-desa-secondary/90 text-white rounded-md">
+                <Link href="/dashboard/admin/perangkat-desa">Kelola Perangkat</Link>
               </Button>
             </CardContent>
           </Card>
