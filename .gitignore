@@ -52,6 +52,14 @@ check-databases-simple.js
 check-databases-*.js
 test-routes-*.js
 backend-auth-routes.js
+test-berita-handler.js
+add-test-berita.js
+test-backend-endpoints.js
+test-berita-response.js
+test-your-public-routes.js
+test-public-endpoints.js
+quick-admin-test.js
+find-correct-database.js
 
 # Database files
 *.db
